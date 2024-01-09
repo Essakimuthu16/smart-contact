@@ -17,8 +17,16 @@ public class Contact {
 	private String email;
 	private String work;
 	private String phone;
-	private String descripiton;
+	private String description;
+	private String image;
 	
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	@ManyToOne
 	private User user;
 	
@@ -58,14 +66,18 @@ public class Contact {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getDescripiton() {
-		return descripiton;
-	}
-	public void setDescripiton(String descripiton) {
-		this.descripiton = descripiton;
-	}
 	
 	
+	
+	
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public User getUser() {
 		return user;
 	}
@@ -74,7 +86,7 @@ public class Contact {
 	}
 	
 	public Contact(Integer cid, String name, String secondName, String email, String work, String phone,
-			String descripiton, User user) {
+			String description, String profileImage, User user) {
 		super();
 		this.cid = cid;
 		this.name = name;
@@ -82,17 +94,14 @@ public class Contact {
 		this.email = email;
 		this.work = work;
 		this.phone = phone;
-		this.descripiton = descripiton;
+		this.description = description;
+		
 		this.user = user;
 	}
 	public Contact() {
 		super();
 	}
-	@Override
-	public String toString() {
-		return "Contact [cid=" + cid + ", name=" + name + ", secondName=" + secondName + ", email=" + email + ", work="
-				+ work + ", phone=" + phone + ", descripiton=" + descripiton + ", user=" + user + "]";
-	}
+	 
 	
 	
 	

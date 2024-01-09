@@ -9,5 +9,5 @@ import com.smart.entity.User;
 public interface UserRepo extends JpaRepository<User, Integer> {
 
 	
-	User findByEmail(String email);
+	User findByName(String name);
 }

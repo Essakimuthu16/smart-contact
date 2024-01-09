@@ -45,7 +45,7 @@
 
     <div class="sidebar mt-2">
 	<span onclick="toogleSidebar()" class="crossBtn">&times;</span>
-      <a href="#" class="item"><i class="fas fa-home"></i> Home</a>
+      <a th:href="@{/}" class="item"><i class="fas fa-home"></i>Home</a>
       <a href="#" class="item"><i class="fas fa-id-card-alt"></i> View Contacts</a>
       <a th:href="@{/user/add-contact}" class="item"><i class="fas fa-pencil-alt"></i> Add Contact</a>
       <a href="#" class="item"><i class="fas fa-user-circle"></i> Your Profile</a>
@@ -57,8 +57,14 @@
 
     <!-- sidebar end -->
 
-	<div class="content mt-4">
+	<div class="content mt-5">
 		<i onclick="toogleSidebar()" class="fas fa-bars m-3"></i>
+	<div th:if="${session.message}" class="container">
+		<div th:classappend="${'alert-'+session.message.type}" class="alert text-center" role="alert">
+  			<span th:text="${session.message.content}"></span>
+		</div>
+	
+	</div>
   		<div th:replace="${content}"></div>
 	</div>
   

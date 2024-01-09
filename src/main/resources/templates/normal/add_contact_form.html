@@ -8,7 +8,7 @@ th:replace="normal/base::layout(~{::section})">
 </head>
 <body>
     <section>
-      <div class="card mr-3">
+      <div class="card mr-3 ml-3">
 		  <div class="card-body">
 			  <h1 class="text-center">Add Contacts</h1>
 			  <div class="container-fluid mt-1">
@@ -68,6 +68,14 @@ th:replace="normal/base::layout(~{::section})">
       <div class="input-group mt-3">
         <textarea name="description" id="description" rows="10" class="form-control" placeholder="Enter your contact description"></textarea>
       </div>
+      
+      <div class="custom-file">
+		  <input type="file" name="profileImage"/>
+	  </div>
+	  
+	  <div class="container text-center">
+		  <button type="submit" class="btn btn-outline-primary">Save Contact</button>
+	  </div>
       
       
     </div>
