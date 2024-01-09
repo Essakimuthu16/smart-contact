@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <section>
+      <div class="card mr-3">
+		  <div class="card-body">
+			  <h1 class="text-center">Add Contacts</h1>
+			  <div class="container-fluid mt-1">
+				  
+				  <div class="row">
+					  <div class="col-md-10 offset-md-1">
+						  <form action="#" th:object="${contact}" enctype="multipart/form-data" method="post" th:action="@{/user/process-contact}" class="mt-2">
+							  
+							  <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+			  <i class="fa fa-plus"></i>
+		  </div>
+        </div>
+        <input type="text" name="name" class="form-control" id="firstName" placeholder="Enter your Name">
+      </div>
+      
+       <div class="input-group mt-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+			  <i class="fas fa-user-alt"></i>
+		  </div>
+        </div>
+        <input type="text" name="secondName" class="form-control" id="secondName" placeholder="Enter your SecondName">
+      </div>
+      
+      
+      <div class="input-group mt-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+			  <i class="fa fa-phone"></i>
+		  </div>
+        </div>
+        <input type="number" name="phone" class="form-control" id="phone" placeholder="Enter your PhoneNumber Here">
+      </div>
+      
+       <div class="input-group mt-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+			  @
+		  </div>
+        </div>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email Here">
+      </div>
+      
+      
+       <div class="input-group mt-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+			  <i class="fa fa-briefcase"></i>
+		  </div>
+        </div>
+        <input type="text" name="work" class="form-control" id="work" placeholder="Enter your Work Here">
+      </div>
+      
+      
+      <div class="input-group mt-3">
+        <textarea name="description" id="description" rows="10" class="form-control" placeholder="Enter your contact description"></textarea>
+      </div>
+      
+      
+    </div>
+    
+    
+							  
+						  </form>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+        
+    </section>
+    
+</body>
+</html>
